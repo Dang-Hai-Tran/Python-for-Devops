@@ -1,0 +1,23 @@
+You can use the open function to create a file object that can
+ read and write files. It takes two arguments, the path of the file
+ and the mode (mode optionally defaults to reading). You use
+ the mode to indicate, among other things, if you want to read or
+ write a file and if it is text or binary data. You can open a text
+ file using the mode r to read its contents. The file object has a
+ read method that returns the contents of the file as a string:
+
+In [1]: file_path = 'bookofdreams.txt'
+
+In [2]: open_file = open(file_path, 'r')
+
+In [3]: text = open_file.read() In [4]: len(text) Out[4]: 476909
+
+In [5]: text[56] Out[5]: 's'
+
+In [6]: open_file
+
+Out[6]: <_io.TextIOWrapper name='bookofdreams.txt'
+
+mode='r' encoding='UTF-8'>
+
+In [7]: open_file.close()
